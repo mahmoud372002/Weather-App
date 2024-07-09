@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <section id="site-content">
+        <header class="header-data">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg w-100" id="navbarspy">
+                    <div class="container d-flex justify-content-between">
+                        <a class="navbar-brand d-flex align-items-center ico" href="#">
+                            <img src="./images/logo@2x.png" alt="wind logo">
+                            <div class="header-text">
+                                <h1>Weather</h1> 
+                                <small>tagline goes here </small>
+                            </div>
+                        </a>
+                        <button class="navbar-toggler menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="spanico"><i class="fa-solid fa-bars"></i></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ul-item">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">News</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Live cameras</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Photo</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./contant.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main id="site-info">
+            <div class="container">
+                <div class="goback">
+                    <a href="./index.html"> Home --> </a>
+                    <span> Contact</span>
+                </div>
+            </div>
+            <div class="container details py-3">
+                <div class="row">
+                    <div class="col-sm-12 col-md-5">
+                        <div class="contant-info w-90">
+                            <div class="map">
+                                <iframe class="ms-5 mb-3 mt-3" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13969.087681500992!2d30.976159350000003!3d28.919976350000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1692286948141!5m2!1sen!2seg" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                            <div class="contact-address ms-5">
+                                <address>
+                                    <span><i class="fa-solid fa-location-dot"></i></span>
+                                    <p>Company Name INC  
+                                        <br>
+                                        2803 Avenue Street, Los Angeles
+                                    </p>
+                                </address>
+                                <a href="#">
+                                    <i class="fa-solid fa-phone"></i>
+                                    +1 800 314 2345
+                                </a>
+                                <a href="#">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    contact@companyname.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-md-offset-1 mt-3">
+                        <h2 class="section-title">Contact us</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consectetur inventore ducimus, facilis, numquam id soluta omnis eius recusandae nesciunt vero repellat harum cum. Nisi facilis odit hic, ipsum sed!</p>
+                        <form action="#" class="">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <input class="form-control" type="text" placeholder="Your name...">
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-control" type="email" placeholder="Email Addresss...">
+                                </div>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <input class="form-control" type="text" placeholder="Company Name...">
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-control" type="text" placeholder="Website...">
+                                </div>
+                            </div>
+                            <textarea name="" id="" placeholder="Message..."></textarea>
+                            <div class="text-right">
+                                <input class="btn bg-info rounded-pill" type="submit" placeholder="Send message">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer-site mt-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 footer-info">
+                        <input type="text" class="form-control" placeholder="Enter your Email to subscribe..">
+                        <button class="btn btn-info rounded-pill py-2">Subscribe</button>
+                        <p class="px-5"> Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="ul-icon d-flex justify-content-center">
+                            <li>
+                                <a href="#"> <i class="fa-brands fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="fa-brands fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="fa-brands fa-google-plus-g"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="fa-brands fa-pinterest"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>

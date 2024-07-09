@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+    <section id="site-content">
+        <!-- Header -->
+        <header class="header-data">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg w-100" id="navbar">
+                    <div class="container d-flex justify-content-between">
+                        <a class="navbar-brand d-flex align-items-center ico" href="#">
+                            <img src="./images/logo@2x.png" alt="wind logo">
+                            <div class="header-text">
+                                <h1>Weather</h1>
+                                <small>tagline goes here</small>
+                            </div>
+                        </a>
+                        <button class="navbar-toggler menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="spanico"><i class="fa-solid fa-bars"></i></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ul-item">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">News</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Live cameras</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Photo</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./contant.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="main-data">
+            <div class="container px-3 py-5 text-center">
+                <div class="row">
+                    <div class="col-sm-12">              
+                        <div class="find-location">
+                            <input class="rounded-pill w-90 mx-auto py-3 form-control" type="text" id="searchInput" placeholder="Find your location...">
+                            <button class="btn btn-info rounded-pill" id="searchButton">Find</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast-table">
+                <div class="container px-3 py-5">
+                    <div class="forecast-container m-auto" id="forecastContainer">
+                        <div class="row gridsite d-flex justify-content-between w-100 g-0 m-auto" id="forecastData">
+                            <!-- Today's Data -->
+                            <div class="col-sm-12 col-lg-4 bg-blue-color">
+                                <div class="today forecast">
+                                    <div class="forecast-header">
+                                        <div class="day" id="currentDayName"></div>
+                                        <div>
+                                            <span class="date" id="currentNumDay"></span>
+                                            <span id="currentMonth"></span>
+                                        </div>
+                                    </div>
+                                    <div class="forecast-content p-4" id="currentForecast">
+                                        <div class="location" id="currentLocation"></div>
+                                        <div class="degree d-flex justify-content-between align-content-center">
+                                            <div class="num" id="currentTemperature"></div>
+                                            <div class="forecast-icon pt-4">
+                                                <img id="currentWeatherIcon" src="./images/116.png"/>
+                                            </div>
+                                        </div>
+                                        <div class="customtoday" id="currentWeatherText"></div>
+                                        <span class="info-ico">
+                                            <img src="./images/icon-umberella.png" alt="umbrella"/>
+                                            <span id="currentHumidity">20%</span>
+                                        </span>
+                                        <span class="info-ico">
+                                            <img src="./images/icon-wind.png" alt="wind"/>
+                                            <span id="currentWind">8kmh</span>
+                                        </span>
+                                        <span class="info-ico">
+                                            <img src="./images/icon-compass.png" alt="compass"/>
+                                            <span id="currentWindDirection">East</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Tomorrow's Data -->
+                            <div class="col-sm-12 col-lg-4 bg-blue-light">
+                                <div class="forecast text-center">
+                                    <div class="forecast-header">
+                                        <div class="day" id="nextDayName"></div>
+                                    </div>
+                                    <div class="forecast-content p-3 pt-5" id="nextForecast">
+                                        <div class="forecast-ico">
+                                            <img id="nextDayIcon" src="./images/113.webp"/>
+                                        </div>
+                                        <div class="degree" id="nextTemperature"></div>
+                                        <small id="nextMinTemperature"></small>
+                                        <div class="custom" id="nextWeatherText"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Day After Tomorrow's Data -->
+                            <div class="col-sm-12 col-lg-4 bg-blue-color pb-5">
+                                <div class="forecast text-center">
+                                    <div class="forecast-header">
+                                        <div class="day" id="afterNextDayName"></div>
+                                    </div>
+                                    <div class="forecast-content p-3 pt-5" id="afterNextForecast">
+                                        <div class="forecast-ico">
+                                            <img src="./images/176.png">
+                                        </div>
+                                        <div class="degree" id="afterNextTemperature"></div>
+                                        <small id="afterNextMinTemperature"></small>
+                                        <div class="custom" id="afterNextWeatherText"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer-site mt-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 footer-info">
+                        <input type="text" class="form-control" placeholder="Enter your Email to subscribe..">
+                        <button class="btn btn-info rounded-pill py-2">Subscribe</button>
+                        <p class="px-5">Copyright 2014 Company name. Designed by Themezy. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="ul-icon d-flex justify-content-center">
+                            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
